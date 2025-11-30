@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>小组活动</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav>
+        <a href=" ">首页</a >
+        <a href="members.html">成员介绍</a >
+        <a href="activities.html">小组活动</a >
+        <a href="blog.html">个人博客</a >
+        <a href="log.html">制作日志</a >
+    </nav>
+
+    <!-- 活动列表 -->
+    <div class="activities-container">
+        <h2>小组活动记录</h2>
+        <div class="activity-item">
+            <h3>活动1：网站需求讨论</h3>
+            <p>时间：2025-11-01</p >
+            <p>内容：确定博客网站的功能模块、分工安排</p >
+        </div>
+        <div class="activity-item">
+            <h3>活动2：页面布局开发</h3>
+            <p>时间：2025-11-08</p >
+            <p>内容：完成首页、成员页的HTML+CSS编写</p >
+        </div>
+        <div class="activity-item">
+            <h3>活动3：交互效果调试</h3>
+            <p>时间：2025-11-15</p >
+            <p>内容：添加导航高亮、头像悬停等JavaScript效果</p >
+        </div>
+    </div>
+
+    <!-- 交互效果 -->
+    <script>
+        // 导航栏当前页高亮
+        const currentPage = window.location.pathname.split("/").pop();
+        document.querySelectorAll("nav a").forEach(link => {
+            if (link.getAttribute("href") === currentPage) {
+                link.style.color = "#17a2b8";
+                link.style.fontWeight = "bold";
+            }
+        });
+        // 活动项点击展开详情（示例）
+        document.querySelectorAll(".activity-item").forEach(item => {
+            item.addEventListener("click", () => {
+                item.style.backgroundColor = "#f0f8ff";
+                item.style.padding = "20px";
+            });
+        });
+    </script>
+</body>
+</html>

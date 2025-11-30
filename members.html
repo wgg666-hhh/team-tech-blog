@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>成员介绍</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav>
+        <a href=" ">首页</a >
+        <a href="members.html">成员介绍</a >
+        <a href="activities.html">小组活动</a >
+        <a href="blog.html">个人博客</a >
+        <a href="log.html">制作日志</a >
+    </nav>
+
+    <!-- 成员列表 -->
+    <div class="members-container">
+        <h2>小组成员</h2>
+        <div class="member-card">
+            <div class="avatar" style="background-image: url(images/yangbo.jpg)"></div>
+            <h3>杨博</h3>
+            <p>负责：网站页面布局开发</p >
+            <p>标签：技术控 | 前端能手</p >
+        </div>
+        <div class="member-card">
+            <div class="avatar" style="background-image: url(images/wangzhonggui.jpg)"></div>
+            <h3>王中贵</h3>
+            <p>负责：制作日志整理</p >
+            <p>标签：统筹达人 | 细节控</p >
+        </div>
+        <div class="member-card">
+            <div class="avatar" style="background-image: url(images/hezeyan.jpg)"></div>
+            <h3>何泽雁</h3>
+            <p>负责：内容撰写/个人博客</p >
+            <p>标签：文案高手 | 生活分享家</p >
+        </div>
+        <div class="member-card">
+            <div class="avatar" style="background-image: url(images/mojiaji.jpg)"></div>
+            <h3>莫嘉佶</h3>
+            <p>负责：网站功能开发</p >
+            <p>标签：技术大佬 | 踩坑专家</p >
+        </div>
+        <div class="member-card">
+            <div class="avatar" style="background-image: url(images/luzengyao.jpg)"></div>
+            <h3>卢增耀</h3>
+            <p>负责：分工协调/技术分享</p >
+            <p>标签：组织达人 | 工具控</p >
+        </div>
+        <div class="member-card">
+            <div class="avatar" style="background-image: url(images/huangfuwei.jpg)"></div>
+            <h3>黄富威</h3>
+            <p>负责：学习心得整理</p >
+            <p>标签：总结能手 | 课程学霸</p >
+        </div>
+    </div>
+
+    <!-- 交互效果 -->
+    <script>
+        // 导航栏当前页高亮
+        const currentPage = window.location.pathname.split("/").pop();
+        document.querySelectorAll("nav a").forEach(link => {
+            if (link.getAttribute("href") === currentPage) {
+                link.style.color = "#17a2b8";
+                link.style.fontWeight = "bold";
+            }
+        });
+        // 头像悬停动画
+        document.querySelectorAll(".avatar").forEach(avatar => {
+            avatar.addEventListener("mouseover", () => {
+                avatar.style.transform = "scale(1.1)";
+                avatar.style.borderColor = "#17a2b8";
+                avatar.style.transition = "all 0.3s";
+            });
+            avatar.addEventListener("mouseout", () => {
+                avatar.style.transform = "scale(1)";
+                avatar.style.borderColor = "#28a745";
+            });
+        });
+    </script>
+</body>
+</html>

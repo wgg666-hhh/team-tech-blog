@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>制作日志</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav>
+        <a href=" ">首页</a >
+        <a href="members.html">成员介绍</a >
+        <a href="activities.html">小组活动</a >
+        <a href="blog.html">个人博客</a >
+        <a href="log.html">制作日志</a >
+    </nav>
+
+    <!-- 日志列表 -->
+    <div class="log-container">
+        <h2>网站制作日志</h2>
+        <div class="log-item">
+            <h3>2025-11-01 项目启动</h3>
+            <p>确定网站主题为“小组博客”，拆分出5个页面模块，分配各成员负责内容</p >
+        </div>
+        <div class="log-item">
+            <h3>2025-11-05 遇到的问题</h3>
+            <p>成员头像显示异常，解决方法：统一图片尺寸并设置background-size: cover</p >
+        </div>
+        <div class="log-item">
+            <h3>2025-11-20 网站上线</h3>
+            <p>完成所有页面开发，部署到GitHub Pages，测试链接正常访问</p >
+        </div>
+    </div>
+
+    <!-- 交互效果 -->
+    <script>
+        // 导航栏当前页高亮
+        const currentPage = window.location.pathname.split("/").pop();
+        document.querySelectorAll("nav a").forEach(link => {
+            if (link.getAttribute("href") === currentPage) {
+                link.style.color = "#17a2b8";
+                link.style.fontWeight = "bold";
+            }
+        });
+    </script>
+</body>
+</html>

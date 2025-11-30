@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>TEAMTECH - 小组博客首页</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav>
+        <a href=" ">首页</a >
+        <a href="members.html">成员介绍</a >
+        <a href="activities.html">小组活动</a >
+        <a href="blog.html">个人博客</a >
+        <a href="log.html">制作日志</a >
+    </nav>
+
+    <!-- banner区域 -->
+    <div class="banner">
+        <h1>TEAMTECH 小组博客</h1>
+        <p>由杨博、王中贵、何泽雁、莫嘉佶、卢增耀、黄富威组成的技术分享小组，记录学习、协作与成长</p >
+    </div>
+
+    <!-- 首页动态效果 -->
+    <script>
+        // 页面加载时banner渐显
+        window.addEventListener("load", () => {
+            const banner = document.querySelector(".banner");
+            banner.style.opacity = "0";
+            let opacity = 0;
+            const fadeIn = setInterval(() => {
+                opacity += 0.1;
+                banner.style.opacity = opacity;
+                if (opacity >= 1) clearInterval(fadeIn);
+            }, 50);
+        });
+        // 导航栏当前页高亮
+        const currentPage = window.location.pathname.split("/").pop();
+        document.querySelectorAll("nav a").forEach(link => {
+            if (link.getAttribute("href") === currentPage) {
+                link.style.color = "#17a2b8";
+                link.style.fontWeight = "bold";
+            }
+        });
+    </script>
+</body>
+</html>

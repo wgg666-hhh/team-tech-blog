@@ -1,0 +1,118 @@
+/* 全局样式 */
+body {
+    margin: 0;
+    font-family: 微软雅黑, sans-serif;
+}
+
+/* 导航栏 */
+nav {
+    background: #555;
+    padding: 15px 0;
+    text-align: center;
+}
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 20px;
+    font-size: 16px;
+}
+
+/* 首页banner */
+.banner {
+    background: linear-gradient(90deg, #17a2b8, #28a745);
+    color: white;
+    padding: 50px 20px;
+    text-align: center;
+}
+.banner h1 {
+    font-size: 36px;
+    margin: 0;
+}
+.banner p {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+/* 成员页样式 */
+.members-container {
+    padding: 30px;
+    text-align: center;
+}
+.members-container h2 {
+    font-size: 28px;
+    margin-bottom: 30px;
+}
+.member-card {
+    display: inline-block;
+    width: 200px;
+    margin: 15px;
+    padding: 20px;
+    background: #f8f9fa;
+}
+.avatar {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto;
+    border: 2px solid #28a745;
+    border-radius: 50%;
+    background-size: cover; /* 适配头像图片 */
+}
+.member-card h3 {
+    color: #28a745;
+    margin: 10px 0;
+}
+.member-card p {
+    font-size: 14px;
+    color: #666;
+    margin: 5px 0;
+}
+
+/* 活动页样式 */
+.activities-container {
+    padding: 30px;
+}
+.activities-container h2 {
+    text-align: center;
+    font-size: 28px;
+}
+.activity-item {
+    background: #f8f9fa;
+    padding: 15px;
+    margin: 10px 0;
+    border-left: 4px solid #17a2b8;
+    cursor: pointer;
+}
+
+/* 博客页样式 */
+.blog-container {
+    padding: 30px;
+}
+.blog-container h2 {
+    text-align: center;
+    font-size: 28px;
+}
+.blog-post {
+    background: #f8f9fa;
+    padding: 15px;
+    margin: 10px 0;
+}
+.blog-post h3 {
+    color: #17a2b8;
+}
+
+/* 日志页样式 */
+.log-container {
+    padding: 30px;
+}
+.log-container h2 {
+    text-align: center;
+    font-size: 28px;
+}
+.log-item {
+    background: #f8f9fa;
+    padding: 15px;
+    margin: 10px 0;
+}
+.log-item h3 {
+    color: #6c757d;
+}
